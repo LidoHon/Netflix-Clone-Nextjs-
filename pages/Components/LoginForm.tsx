@@ -91,7 +91,7 @@ const LoginForm = () => {
 					<button className="bg-neutral-600 bg-opacity-50 text-white rounded-md w-full mt-2 py-2 hover:bg-neutral-700 transition text-sm">
 						Use a Sign-In Code
 					</button>
-					<div className="flex flex-row items-center gap-4 mt-4 justify-center">
+					{/* <div className="flex flex-row items-center gap-4 mt-4 justify-center">
 						<div
 							onClick={handleGoogleSignIn}
 							className="w-5 h-5 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition"
@@ -104,7 +104,7 @@ const LoginForm = () => {
 						>
 							<FaGithub />
 						</div>
-					</div>
+					</div> */}
 					<Link href="/loginHelp" passHref>
 						<div className="text-white text-sm text-center cursor-pointer hover:text-neutral-400 hover:underline py-2">
 							Forgot Password?
