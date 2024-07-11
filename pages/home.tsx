@@ -1,8 +1,7 @@
 import React from 'react';
-import { getSession, signOut } from 'next-auth/react';
+import { getSession } from 'next-auth/react';
 import { NextPageContext } from 'next';
 import { redirect } from 'next/dist/server/api-utils';
-import useCurrentUser from '@/hooks/useCurrentUser';
 import Navbar from './Components/Navbar';
 import Billboard from './Components/Billboard';
 import MovieList from './Components/MovieList';
@@ -11,6 +10,7 @@ import useFavorites from '@/hooks/useFavorites';
 import InfoModel from './Components/InfoModel';
 import useInfoModel from '@/hooks/useInfoModel';
 import Footer from './Components/Footer';
+
 export async function getServerSideProps(context: NextPageContext) {
 	const session = await getSession(context);
 	console.log('Session:', session);

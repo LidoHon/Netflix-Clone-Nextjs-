@@ -19,7 +19,7 @@ const Billboard = () => {
 	const toggleMute = () => {
 		if (videoRef.current) {
 			videoRef.current.muted = !videoRef.current.muted;
-			setIsMuted(videoRef.current.muted);
+			setIsMuted(!videoRef.current.muted);
 		}
 	};
 
@@ -70,7 +70,7 @@ const Billboard = () => {
 				playsInline
 				poster={data?.thumbnailUrl}
 				src={data.videoUrl}
-				className="w-full h-full object-cover brightness-[60%]"
+				className="w-full h-full object-cover brightness-[50%]"
 				controls={false}
 			/>
 			<div className="absolute top-[30%] md:top-[40%] ml-4 md:ml-16">

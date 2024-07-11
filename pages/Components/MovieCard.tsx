@@ -24,7 +24,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
 		return null;
 	}
 	return (
-		<div className="group bg-zink-900 col-span relative h-[12vw]">
+		<div className="group bg-zink-900 col-span relative h-[12vw] mb-4 ">
 			<img
 				className="cursor-pointer object-cover transition duration shadow-xl group-hover:opacity-90 sm:group-hover:opacity-0 delay-300 w-full h-[15vw] rounded-sm"
 				src={data.thumbnailUrl}
@@ -32,6 +32,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ data }) => {
 			/>
 			<div className="opacity-0 absolute top-0 transition duration-200 z-10 invisible sm:visible delay-300 w-full scale-0 group-hover:scale-110 group-hover:-translate-y-[6vw] group-hover:translate-x-[2vw] group-hover:opacity-100">
 				<img
+					onClick={() => router.push(`/watch/${data?.id}`)}
 					className="cursor-auto object-cover transition duration shadow-xl rounded-sm w-full h-[15vw]"
 					src={data.thumbnailUrl}
 					alt="thumbnail"

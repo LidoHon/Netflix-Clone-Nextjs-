@@ -31,12 +31,12 @@ const LoginForm = () => {
 				email,
 				password,
 				redirect: false,
-				callbackUrl: 'Profiles',
+				callbackUrl: '/Profiles',
 			});
 			if (result?.error) {
 				setError(result.error);
 			} else {
-				router.push('Profiles');
+				router.push('/Profiles');
 			}
 		} catch (error) {
 			console.error('Login error:', error);

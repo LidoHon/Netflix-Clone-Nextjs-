@@ -6,7 +6,6 @@ import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 
-// Validate accounts function
 async function validateAccounts() {
 	try {
 		const accounts = await prismadb.account.findMany({
@@ -25,7 +24,6 @@ async function validateAccounts() {
 	}
 }
 
-// Run validation on server start
 validateAccounts();
 
 export default NextAuth({
@@ -79,7 +77,8 @@ export default NextAuth({
 	},
 	secret: process.env.NEXTAUTH_SECRET,
 	callbacks: {
-		async session({ session, token, user }) {
+		async session({ session, token }) {
+			console.log('Session Callback:', session, token);
 			if (session.user) {
 				session.user.id = token.id as string;
 			}
@@ -88,10 +87,8 @@ export default NextAuth({
 		async redirect({ url, baseUrl }) {
 			return url.startsWith(baseUrl) ? url : baseUrl;
 		},
-		async signIn({ user, account, profile, email, credentials }) {
-			console.log('User:', user);
-			console.log('Account:', account);
-			console.log('Profile:', profile);
+		async signIn({ user, account, profile }) {
+			console.log('SignIn Callback:', user, account, profile);
 			return true;
 		},
 	},

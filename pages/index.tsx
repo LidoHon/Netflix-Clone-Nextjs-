@@ -67,7 +67,7 @@ const HomePage: React.FC = () => {
 				</div>
 				<div className="relative  ">
 					<img src="/images/mobile.jpg" alt="img" className="w-full " />
-					<div className="absolute left-14 inset-x-0   bottom-0 bg-black mb-10 ml-20 text-white p-1 pl-3 rounded-lg flex items-center w-[60%] border-2 border-neutral-500 ">
+					<div className="absolute left-3 md:left-10 inset-x-0   bottom-0 bg-black mb-10 ml-20 text-white p-1 pl-3 rounded-lg flex items-center w-[60%] border-2 border-neutral-500 ">
 						<img
 							src="/images/boxshot.png"
 							alt="Stranger Things"

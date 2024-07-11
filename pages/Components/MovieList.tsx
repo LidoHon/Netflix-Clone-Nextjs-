@@ -26,7 +26,7 @@ const MovieList: React.FC<MovieListProps> = ({ data, title }) => {
 			<p className="text-white text-md md:text-xl lg:text-2xl lg:mt-4 font-semibold pt-10">
 				{title}
 			</p>
-			<div className="grid grid-cols-5 gap-2">
+			<div className="grid grid-cols-7 gap-2">
 				{data.map((movie) => (
 					<MovieCard key={movie.id} data={movie} />
 				))}

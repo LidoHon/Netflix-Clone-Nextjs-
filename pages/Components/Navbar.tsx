@@ -77,7 +77,7 @@ const Navbar = () => {
 						className="flex flex-row items-center gap-2 cursor-pointer relative"
 					>
 						<div className="w-6 h-6 lg:h-10 lg:w-10 rounded-md overflow-hidden">
-							<img src="/images/blue.png" alt="" />
+							<img src="/images/red.png" alt="" />
 						</div>
 						<FaChevronDown
 							className={`text-white transition ${
